@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="gradient">
+    <h1>Gradient Generator</h1>
+
+    <div class="gradient-box" id="gradientBox"></div>
+
+    <div>
+        <input type="color" id="color1" value="#ff7f50">
+        <input type="color" id="color2" value="#00bfff">
+        <input type="number" id="angle" value="90" min="0" max="360"> <label for="angle">Angle</label>
+    </div>
+
+    <button class="btn" onclick="generateGradient()">Generate Gradient</button>
+
+    <p id="gradientCode"></p>
+
+    <script>
+        function generateGradient() {
+            var color1 = document.getElementById("color1").value;
+            var color2 = document.getElementById("color2").value;
+            var angle = document.getElementById("angle").value;
+
+            // Set the background of the gradient box
+            var gradient = "linear-gradient(" + angle + "deg, " + color1 + ", " + color2 + ")";
+            document.getElementById("gradientBox").style.background = gradient;
+
+            // Show the CSS code for the gradient
+            document.getElementById("gradientCode").textContent = "background: " + gradient + ";";
+        }
+    </script>
+
+</div>
+</body>
+</html>

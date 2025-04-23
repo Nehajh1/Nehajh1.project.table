@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page to demonstrate right-click functionality.">
+    <title>Right Click Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="rightClick">
+        <h1>Right-Click Interaction</h1>
+        <p>Right-click anywhere on this page to see the custom context menu.</p>
+        <div class="message" id="message">Right-click anywhere to see the action.</div>
+    </div>
+
+    <script>
+        // Disable the default right-click menu
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            document.getElementById('message').innerText = "You just right-clicked on the page!";
+        });
+    </script>
+
+</body>
+</html>

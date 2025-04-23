@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple page to demonstrate text replacement functionality.">
+    <title>Replace Text Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="replace">
+        <h1>Replace Text Example</h1>
+        <p id="original-text">This is the original text. It will be replaced by new text.</p>
+        <button onclick="replaceText()" class="btn">Replace Text</button>
+    </div>
+
+    <script>
+        function replaceText() {
+            document.getElementById('original-text').innerText = "The text has been replaced successfully!";
+        }
+    </script>
+
+</body>
+</html>

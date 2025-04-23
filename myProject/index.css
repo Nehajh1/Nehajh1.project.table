@@ -1,0 +1,1786 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width */
+    margin: 0;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background-color: white;
+    font-size: 18px; /* Larger font size for better readability */
+    border: 2px solid #ddd; /* Increased border width */
+    table-layout: auto; /* Flexible column widths */
+}
+
+/* Set Column Widths */
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #ddd;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 25%; } /* Title */
+th:nth-child(2), td:nth-child(2) { width: 25%; } /* Code */
+th:nth-child(3), td:nth-child(3) { width: 20%; } /* Live Demo */
+th:nth-child(4), td:nth-child(4) { width: 30%; word-wrap: break-word; } /* Description with word wrapping */
+
+/* Table Headers */
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+/* Table Cells */
+td {
+    padding: 15px;
+    border: 2px solid #ddd;
+    text-align: left;
+    background-color: white;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Description */
+.description {
+    font-size: 15px; /* Adjusted smaller size */
+    color: #555; /* Dark gray for readability */
+    line-height: 1.4; /* Compact line height */
+    text-align: center; /* Centered text */
+    margin: 10px 0; /* Spacing for readability */
+}
+
+/* Underline Title */
+h2 {
+    text-decoration: underline; /* Adds underline */
+    font-size: 24px; /* Optional: Adjust size of title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets and Mobile Devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    table {
+        font-size: 16px; /* Slightly smaller text on tablets */
+    }
+
+    th, td {
+        padding: 12px; /* Less padding for smaller screens */
+    }
+
+    th, td {
+        font-size: 16px; /* Adjust font size to fit better on smaller devices */
+    }
+
+    /* Ensure description text wraps properly */
+    td:nth-child(4) {
+        word-wrap: break-word;
+        white-space: normal; /* Allow description to wrap */
+    }
+}
+
+/* Mobile-Specific Adjustments (Less than 480px) */
+@media only screen and (max-width: 480px) {
+    table {
+        font-size: 14px; /* Smaller text size for mobile */
+    }
+
+    th, td {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    th, td {
+        font-size: 14px; /* Adjust font size further for mobile */
+    }
+
+    /* Allow table to be fully responsive and fit content */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling if needed */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    }
+
+    /* Prevent text from overflowing */
+    td:nth-child(4) {
+        word-wrap: break-word;
+        white-space: normal; /* Allow description to wrap */
+    }
+
+    /* Adjust column widths for smaller screens */
+    th:nth-child(1), td:nth-child(1) { width: 30%; } /* Title */
+    th:nth-child(2), td:nth-child(2) { width: 30%; } /* Code */
+    th:nth-child(3), td:nth-child(3) { width: 20%; } /* Live Demo */
+    th:nth-child(4), td:nth-child(4) { width: 40%; } /* Description */
+}
+
+
+
+
+
+/* Styles for Heading Page */
+.heading {
+    background-color: #f4f7fb; /* Light background color */
+    padding: 40px 20px; /* Adding padding for spacing */
+    text-align: center;
+}
+/* Main Heading (h1) within the .heading class */
+.heading h1 {
+    font-size: 28px;
+    color: #4CAF50; /* Blue color for emphasis */
+    margin-top: 60px; /* Adds space above the heading */
+    text-transform: uppercase; /* Makes the text uppercase */
+    letter-spacing: 3px; /* Adds spacing between letters */
+    font-weight: 700; /* Bold weight for a stronger heading */
+}
+/* Subheading (h2) within the .heading class */
+.heading h2 {
+    font-size: 20px;
+    color: #555; /* Slightly dark gray for the subheading */
+    margin-top: 30px;
+    font-weight: 400; /* Normal weight for subheading */
+    text-decoration: underline; /* Adds an underline for emphasis */
+    font-style: italic; /* Adds an italic style to make it stand out */
+}
+/* Paragraphs (p) within the .heading class */
+.heading p {
+    font-size: 14px;
+    color: #444; /* Darker gray text for readability */
+    line-height: 1.8; /* Increases line height for better readability */
+    margin: 20px auto;
+    width: 80%; /* Keeps paragraphs narrow */
+    font-weight: 300; /* Light weight for paragraphs */
+}
+/* Horizontal Line (hr) within the .heading class */
+.heading hr {
+    width: 60%;
+    margin: 40px auto;
+    border: 1px solid #ddd; /* Soft gray border */
+    opacity: 0.7; /* Slight transparency */
+}
+
+
+/* Styling for the Table page */
+.table {
+    width: 60%; /* Smaller table size */
+    margin: 20px auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Table Heading */
+.table h2 {
+    text-align: center;
+    color: #333;
+    font-size: 20px; /* Slightly smaller heading */
+    margin-bottom: 10px;
+}
+/* Table Headers */
+.table th {
+    background-color: #4CAF50; /* Green background for header */
+    color: white;
+    padding: 8px;
+    font-size: 16px; /* Smaller font size */
+    font-weight: bold;
+}
+/* Table Data */
+.table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light gray border */
+    font-size: 16px; /* Smaller font size for content */
+}
+/* Row Hover Effect */
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+/* Alternate Row Colors */
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading {
+        width: 90%; /* Adjust the heading section for smaller screens */
+    }
+
+    .table {
+        width: 90%; /* Adjust the table width for smaller screens */
+    }
+
+    th, td {
+        font-size: 11px; /* Smaller font size on mobile */
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+/* Form Container */
+.form {
+    width: 400px;
+    padding: 30px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center the form on the page */
+}
+/* Heading */
+.form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+/* Form Elements */
+.form label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left; /* Align label text to the left */
+}
+/* Input Fields */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+/* Input Focus */
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+/* Message Box */
+textarea {
+    resize: vertical;
+    height: 150px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+/* Submit Button */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Submit Button Hover */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* Survey Form Styles */
+.survey {
+    width: 350px; /* Set a fixed width */
+    margin: 50px auto; /* Center horizontally */
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.survey h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.survey label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+    display: inline-block;
+    text-align: left;
+}
+.survey input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+/* Add some spacing between sections */
+br {
+    line-height: 2;
+}
+
+/* Meta Container Styling */
+.meta-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading Styling */
+.meta-container h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.meta-container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Container for RGBA boxes */
+.rgba {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+/* Title Style */
+.rgba h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Box Style */
+.rgba-box {
+    font-size: 1.2em;
+    padding: 20px;
+    margin: 10px auto;
+    width: 70%;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific RGBA box styles */
+.box1 {
+    background-color: rgba(255, 0, 0, 0.3); /* Light Red */
+}
+
+.box2 {
+    background-color: rgba(0, 255, 0, 0.5); /* Medium Green */
+}
+
+.box3 {
+    background-color: rgba(0, 0, 255, 0.7); /* Dark Blue */
+}
+
+.box4 {
+    background-color: rgba(255, 165, 0, 0.9); /* Almost Solid Orange */
+}
+
+/* Font Container */
+.font {
+    width: 60%;
+    margin: 0 auto; /* This centers the container horizontally */
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text within the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This centers the container vertically */
+}
+/* Heading */
+.font h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Font Family Styles */
+.font-serif {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+.font-sans-serif {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-size: 18px;
+    color: #16a085;
+    margin: 10px 0;
+}
+
+.font-monospace {
+    font-family: "Courier New", "Consolas", monospace;
+    font-size: 18px;
+    color: #8e44ad;
+    margin: 10px 0;
+}
+
+.font-cursive {
+    font-family: "Brush Script MT", "Comic Sans MS", cursive;
+    font-size: 18px;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.font-fantasy {
+    font-family: "Impact", "Papyrus", fantasy;
+    font-size: 18px;
+    color: #f39c12;
+    margin: 10px 0;
+}
+
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Border Margin */
+.bordermargin {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Header for the demonstration */
+.bordermargin h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Style for the boxes */
+.bordermargin box {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+/* Flexbox to alternate between left and right */
+.bordermargin .box:nth-child(odd) {
+    align-self: flex-start; /* Align odd boxes to the left */
+}
+
+.bordermargin .box:nth-child(even) {
+    align-self: flex-end; /* Align even boxes to the right */
+}
+
+/* Border box with a 5px solid border */
+.border-box {
+    border: 5px solid #FF6347; /* Tomato red border */
+    background-color: #FFB6C1; /* Light pink background */
+    color: #4B0082; /* Indigo text */
+    
+}
+
+/* Margin box with a 20px margin */
+.margin-box {
+    margin: 20px;
+    background-color: #90EE90; /* Light green background */
+    color: #2F4F4F; /* Dark slate gray text */
+    border: 3px dashed #8B0000;
+}
+
+/* Padding box with a 20px padding */
+.padding-box {
+    padding: 30px;
+    background-color: #ADD8E6; /* Light blue background */
+    border: 2px solid #2F4F4F;
+
+}
+
+/* Box with border, margin, and padding */
+.all-box {
+    border: 4px solid #00BFFF; /* Gold dashed border */
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+
+/*BackgroundImage*/
+.backgroundImage {
+    width: 80%;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+.backgroundImage h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/* Solid Background Color */
+.bg-color {
+    background-color: #3498db;
+}
+
+/* Background Image */
+.bg-image {
+    background-image: url('Images/2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Gradient Background */
+.bg-gradient {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+/* Fixed Background */
+.bg-fixed {
+    background: url('Images/2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Multiple Background Images */
+.bg-multiple {
+    background:url('Images/2.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, center;
+}
+
+/*Text Decoration */
+.textDecoration {
+    text-align: center;
+    padding: 20px;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+    margin-top: 150px; 
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: 80%; /* Keeps it not too wide */
+    max-width: 600px; /* Restricts the maximum width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textDecoration h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.textDecoration p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* No Decoration */
+.text-none {
+    text-decoration: none;
+}
+
+/* Underline */
+.text-underline {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+/* Overline */
+.text-overline {
+    text-decoration: overline;
+    color: #27ae60;
+}
+
+/* Line Through */
+.text-line-through {
+    text-decoration: line-through;
+    color: #e74c3c;
+}
+
+/* Mixed (Underline + Overline) */
+.text-mixed {
+    text-decoration: underline overline;
+    color: #f39c12;
+}
+
+/* Dotted Underline */
+.text-dotted {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #8e44ad;
+}
+
+/* Dashed Underline */
+.text-dashed {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: #2c3e50;
+}
+
+/* Wavy Underline */
+.text-wavy {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: #d35400;
+}
+
+
+/*Hello page*/
+.hello {
+    background-color: #ffffff;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border: 2px solid #4CAF50;
+    margin: 60px auto;
+    
+    
+}
+/* Heading styling */
+.hello h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+/* Paragraph styling */
+.hello p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+/* Replace container */
+.replace {
+    background-color: #fff;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto;
+}
+/* Heading */
+.replace h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+/* Paragraph */
+.replace p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Button styling */
+.replace .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+/* Button hover effect */
+.replace .btn:hover {
+    background-color: #45a049;
+}
+
+
+/* RightClick */
+.rightClick {
+    background-color: #fff;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto;
+}
+/* Heading */
+.rightClick h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+/* Paragraph */
+.rightClick p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* Valid Email */
+.validEmail{
+    background-color: #fff;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 60px auto;
+    
+}
+/* Heading */
+.validEmail h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+.validEmail label{
+    text-align: left;
+    display: block;
+}
+/* Input styling */
+.validEmail input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+}
+
+/* Input focus effect */
+.validEmail input:focus {
+    border-color: #4CAF50;
+}
+
+/* Button styling */
+.validEmail button {
+    padding: 12px 25px; /* Add more padding for a larger button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center-align text inside the button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth background change and scaling effect */
+    
+}
+
+/* Button hover effect */
+.validEmail button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Button grows slightly when hovered */
+}
+
+/* Button focus effect */
+.validEmail button:focus {
+    outline: none; /* Remove the outline */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Add shadow when focused */
+}
+
+/* Message */
+#message {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Page */
+.responsivePage {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.fullyresponsive {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.fullyresponsive h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: rgb(97, 93, 93);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: black; /* Highlight links on hover */
+}
+
+/* Section Styles */
+.responsive {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.responsive h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.responsive p {
+    font-size: 16px;
+    color: #555;
+}
+
+.fullyresponsive{
+    background-color: #84a0bb;
+}
+
+
+/*Landing page*/
+.cta-btn:hover{
+    color: #000000;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices (small screens) */
+@media (max-width: 768px) {
+    .fullyresponsive h1 {
+        font-size: 22px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .responsive h2 {
+        font-size: 20px;
+    }
+
+    .responsive p {
+        font-size: 14px;
+    }
+}
+
+/* Tablets (medium screens) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .fullyresponsive h1 {
+        font-size: 26px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .responsive h2 {
+        font-size: 22px;
+    }
+
+    .responsive p {
+        font-size: 15px;
+    }
+}
+
+/* Larger Screens (desktops) */
+@media (min-width: 1025px) {
+    .fullyresponsive h1 {
+        font-size: 32px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .responsive h2 {
+        font-size: 28px;
+    }
+
+    .responsive p {
+        font-size: 18px;
+    }
+}
+
+
+
+/* bootstrap page */
+.bootstrap {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);/* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Maximum width for the form */
+    margin: 60px auto;
+    background-color: wheat;
+}
+
+/* Form heading */
+.bootstrap h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form fields (labels and inputs) */
+.form-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Checkbox styling */
+.form-check-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-check-input {
+    margin-right: 10px;
+}
+
+/* Submit button styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Bootstrap primary blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on submit button */
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* Portfolio Page */
+.portfolio-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar Styling */
+.portfolio-header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-nav-list li {
+    margin: 0 30px;
+    position: relative;
+}
+
+.nav-link {
+    color: #ecf0f1; /* Light color for text */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db; /* Blue color on hover */
+    border-bottom: 2px solid #3498db; /* Underline effect on hover */
+}
+
+/* Active Link */
+.nav-link:active, .nav-link:focus {
+    color: #1abc9c; /* A subtle green for active links */
+    border-bottom: 2px solid #1abc9c;
+}
+/* About Me Section */
+.about-me-section {
+    background-color: #2c3e50; /* Dark blue background */
+    color: #ecf0f1; /* Light text */
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 30px;
+}
+
+.about-me-title {
+    font-size: 36px;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.about-me-description {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #ecf0f1;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #3498db; /* Light blue background */
+    color: #fff;
+}
+
+.projects-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.project-item {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 28px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #3498db;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #34495e;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.contact-title {
+    font-size: 36px;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.contact-description {
+    font-size: 18px;
+    color: #ecf0f1;
+    margin-bottom: 25px;
+}
+
+.contact-email, .contact-linkedin {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ecf0f1;
+}
+
+.contact-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #1abc9c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-nav-list {
+        flex-direction: column;
+       align-items: center;
+    }
+
+    .portfolio-nav-list li {
+        margin-bottom: 15px;
+    }
+
+    .project-item {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .about-me-title {
+        font-size: 32px;
+    }
+
+    .projects-title {
+        font-size: 32px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+}
+
+
+
+
+/* Container for the css padding boxes */
+.cssPadding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* General Box Styling */
+.Paddingbox {
+    background-color: lightblue;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Padding for Each Box */
+#Paddingbox1 {
+    padding: 20px;
+}
+
+#Paddingbox2 {
+    padding: 50px;
+}
+
+#Paddingbox3 {
+    padding: 20px 40px 60px 80px; /* Top: 20px, Right: 40px, Bottom: 60px, Left: 80px */
+}
+
+/* Header Styling */
+.Paddingbox h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+.Paddingbox p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hover Effect for Boxes */
+.Paddingbox:hover {
+    background-color: #e3f2fd;
+    border-color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Landing page */
+.containers {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.landing1 {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.landing1 h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.landing1 p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #ff6a00;
+}
+
+/* Introduction Section */
+#about {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Call to Action Section */
+#cta {
+    background-color: #ff8c00;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#cta .cta-btn {
+    background-color: #007bff;
+    font-size: 1.2rem;
+}
+
+#cta .cta-btn:hover {
+    background-color: #005bb5;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .landing h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing p {
+        font-size: 1rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #cta h2 {
+        font-size: 2rem;
+    }
+
+    .cta-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+
+
+/* Todo container styling */
+.todo-container {
+    background: linear-gradient(135deg, #ff7f50, #00bfff); /* Gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    padding: 30px; /* Increased padding */
+    width: 100%;
+    max-width: 500px; /* Wider container */
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Title styling */
+.todo-container h1 {
+    font-size: 32px; /* Larger title */
+    color: #fff; /* White color for contrast */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Input field styling */
+#taskInput {
+    width: calc(100% - 120px); /* Adjusted width to give more space */
+    padding: 12px;
+    margin-bottom: 15px; /* Increased margin for spacing */
+    border: 2px solid #ddd; /* Soft border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Larger font size */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Input field focus effect */
+#taskInput:focus {
+    border-color: #ff7f50; /* Highlight border color when focused */
+}
+
+/* Add button styling */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Todo list item styling */
+.taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+
+/* Calculator styles */
+.calculator {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 40px; /* Increased padding for more space */
+    border-radius: 15px; /* Slightly larger border radius */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Increased shadow for a bigger effect */
+    width: 400px; /* Increased width for a bigger calculator */
+    margin: 60px auto;
+}
+
+/* Display styles */
+#display {
+    width: 100%;
+    padding: 15px; /* Increased padding for a bigger display */
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    text-align: right;
+    font-size: 32px; /* Increased font size for the display */
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Keeps the 4-column layout */
+    gap: 15px; /* Increased gap between buttons */
+}
+
+/* Button styles */
+button {
+    padding: 20px; /* Increased padding for bigger buttons */
+    font-size: 24px; /* Increased font size for buttons */
+    background-color: black;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button active state */
+button:active {
+    background-color: wheat;
+}
+
+/* Operator styles */
+.operator {
+    background-color: #ff9f00;
+    color: black;
+}
+
+.operator:hover {
+    background-color: #ff7a00;
+}
+
+/* Equal button (Operator) styles */
+.operator.equal {
+    background-color: #ff9f00;
+    color: green;
+    grid-column: span 2; /* Spans two columns for the equal button */
+}
+
+.operator.equal:hover {
+    background-color: #45a049;
+}
+
+
+/* Search page */
+.search {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+/* Style the search bar */
+#search-bar {
+    width: 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3498db;
+    border-radius: 30px;
+    outline: none;
+    transition: width 0.4s ease, padding 0.4s ease; /* Animation for expanding */
+}
+
+/* Focus effect to expand the search bar */
+#search-bar:focus {
+    width: 250px;
+    padding: 10px 15px;
+}
+
+/* Optional: Add a subtle glow effect when the search bar is focused */
+#search-bar:focus {
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+
+/* Car animation */
+.car {
+    width: 100px;
+    height: 50px;
+    background-color: #000000; /* A blue car */
+    background:  black;
+    position: absolute;
+    bottom: 50px; /* Position the car at the bottom */
+    animation: moveCar 5s linear infinite; /* Animation to move the car */
+}
+
+/* Keyframe animation for the car */
+@keyframes moveCar {
+    0% {
+        left: -100px; /* Start off the screen */
+    }
+    100% {
+        left: 100%; /* Move the car off the screen to the right */
+    }
+}
+
+
+/* Fluid webpage container */
+.fluidwebpage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    background:linear-gradient(135deg, #e3f2fd, #bbdefb);
+}
+
+/* Header */
+.fluidwebpage header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Main content */
+.fluidwebpage main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Section styling */
+.fluidwebpage section {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fluidwebpage section h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.fluidwebpage footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fluidwebpage {
+        padding: 10px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
+
+
+/* Gradient container */
+.gradient {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    width: 500px; /* Increased width */
+    margin: 60px auto;
+    max-width: 100%; /* Makes the container responsive */
+}
+
+/* Gradient box */
+.gradient-box {
+    width: 100%;
+    height: 250px; /* Increased height */
+    border-radius: 10px;
+    margin: 20px 0;
+    background: linear-gradient(90deg, #ff7f50, #00bfff);
+}
+
+/* Color pickers and angle input */
+input[type="color"], input[type="number"] {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width for inputs */
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* Button */
+button.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px; /* Adjusted padding for a bigger button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    width: 100%; /* Full width for button */
+}
+
+button.btn:hover {
+    background-color: #45a049;
+}
+
+/* Gradient code text */
+#gradientCode {
+    margin-top: 20px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: #333;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Ensures proper wrapping */
+}

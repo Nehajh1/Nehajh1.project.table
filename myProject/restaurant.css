@@ -1,0 +1,1350 @@
+/* FIRST CSS FILE */
+/* Import Rubik font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+:root{
+  --primary-color: #e67e22;
+  /*--tint-color: #fdf2e9;*/
+  --grey-color: #555;
+  --font-main: "Rubik", sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+html body{
+    width: 100vw;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+    /*background-color: var(--tint-color);*/
+    color: var(--grey-color);
+    line-height: 1.6;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/*-------------Page 1 --------------*/
+.page1-scale-wrapper {
+  background-color: #fdf2e9;
+}
+.page1-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+.page1-logo{
+  order: 1; /* Now comes first (left side) */
+}
+.page1-logo img{
+  width: 150px;  /* Increased from 60px */
+  height: auto;
+}
+.page1-list{
+  order: 2; /* Now comes second (right side) */ 
+}
+/* Hamburger Menu Styles */
+.nav-toggle {
+  display: none; /* Hidden checkbox */
+}
+.nav-toggle-label {
+  display: none; /* Hidden by default, shown on smaller screens */
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 20; /* Ensure it’s above other elements */
+}
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  background-color: #333;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.hamburger-icon {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+}
+.hamburger-icon::before {
+  top: -8px;
+}
+.hamburger-icon::after {
+  top: 8px;
+}
+/* Transform hamburger into "X" when checked */
+.nav-toggle:checked + .nav-toggle-label .hamburger-icon {
+  background: transparent;
+}
+.nav-toggle:checked + .nav-toggle-label .hamburger-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav-toggle:checked + .nav-toggle-label .hamburger-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.page1-main-nav-list{
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+.page1-main-nav-list a{
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.page1-nav-cta{
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+  color: white !important;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.page1-section-hero{
+  padding: 64px;
+}
+.page1-hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+}
+.page1-hero-text-box{
+  max-width: 50%;
+  margin-left: auto;  /* Centers it horizontally */
+  margin-right: auto; /* Centers it horizontally */
+  padding-left: 200px;  /* Adds a little space to move the text slightly right */
+}
+.page1-heading-primary{
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #333333;
+    line-height: 1.4;
+}
+.page1-hero-description{
+    font-size: 18px;
+    margin-bottom: 32px;
+    color: #333333;
+}
+.page1-hero-buttons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding: 40px 0;
+    justify-content: center;
+    margin-right: 65px;
+}
+.page1-btn{
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+.page1-btn--full{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+.page1-btn--outline{
+    border: 2px solid #ddd;
+    color: var(--grey-color);
+    background-color: white;
+    font-weight: bold;
+}
+.page1-hero-buttons :hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(230, 126, 34, 0.4);
+    
+}
+  .page1-delivered-meals{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .page1-delivered-imgs img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+  }
+  .page1-delivered-text{
+    font-size: 14px;
+    color: #333333;
+    font-weight: bold;
+  }
+  .page1-delivered-text strong{
+    color: var(--primary-color);
+  }
+  .page1-hero-img-box{
+    position: relative;
+    width: 520px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .page1-img-meal2{
+    width: 400px;
+    height: 450px;
+    top: 0px;     /* lowered it slightly */
+    right: 10px;    /* moved a bit to the right */
+    border-radius: 0;
+  }
+
+  /*-------------Page 2 --------------*/
+
+  .page2-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .page2-featured-in{
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: Rubik, sans-serif;
+  }
+  .page2-featured-text{
+    font-size: 14px;
+    color: #857f7f;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .page2-logos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: nowrap;
+    color: #857f7f;
+  }
+  .page2-logo1{
+    height: 30px;
+    filter: brightness(0) saturate(100%) hue-rotate(180deg);
+    opacity: 0.6;
+  }
+  .page2-logo2{
+    height: 30px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+  .page2-logo3{
+    height: 30px;
+    filter: grayscale(100%);
+    color: lightslategray;
+    opacity: 0.5;
+  }
+  .page2-logo4{
+    height: 30px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+  .page2-logo5{
+    height: 30px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+  .page2-section-label{
+    font-size: 14px;
+    font-weight: 700;
+    color: #f28c38; /* Orange color */
+    text-transform: uppercase;
+    margin-right: 10px; /* Add spacing between "HOW IT WORKS" and the main heading */
+    margin-top: 60px;
+  }
+  .page2-how-it-works h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #333;
+    max-width: 80%;
+    text-align: left;
+    margin-bottom: 60px;
+    display: flex; /* Use flex to align the label and heading in a single line */
+    align-items: baseline; /* Align the baseline of the text for better visual alignment */
+  }
+  .page2-step-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+  }
+  .page2-step-text{
+    max-width: 50%;
+    text-align: left; 
+    margin: 0;
+  }
+  .page2-step-number{
+    font-size: 80px;
+    font-weight: 700;
+    color: #DDDDDD;
+    display: block;
+    margin-bottom: 20px;
+    gap: 100px;
+    margin: 0;
+  }
+  .page2-step-text h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  .page2-step-text p{
+    font-size: 19px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .page2-step-image{
+    max-width: 40%;
+    position: relative;
+    overflow: visible;
+  }
+  .page2-step-image::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px; /* Slightly smaller for the ring effect */
+    height: 200px;
+    background-color: #f7d0b2;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .page2-step-image::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px; /* Size of the background circle */
+    height: 300px;
+    background-color: #f5e1d2; /* Peach color for the main circle */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .page2-step-image img{
+    position: relative;
+    max-width: 50%;
+    height: auto;
+    left: 100px;
+    border-radius: 10px;
+    z-index: 4;
+  }
+
+  /*-------------Page 3 --------------*/
+  .page3-container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .page3-header{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .page3-header h1{
+    font-size: 36px;
+    color: #333;
+  }
+  .page3-header p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #f28c38;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .page3-main-content{
+    display: flex;
+    gap: 15px;
+    
+  }
+  .page3-recipes{
+    flex: 2;
+    display: flex;
+    gap: 20px;
+  }
+  .page3-recipe-card:hover {
+    transform: scale(1)  translateY(-5px); ; /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Stronger shadow */
+  }
+  /* Adding hover effect to text as well */
+.page3-recipe-card:hover .page3-label,
+.page3-recipe-card:hover h3 {
+  color: black; /* Change text color when hovered */
+}
+  .page3-recipe-card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and box-shadow */
+    
+  }
+  .page3-recipe-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .page3-recipe-card .page3-content{
+    padding: 20px;
+  }
+  .page3-recipe-card .page3-label{
+    display: inline-block;
+    background-color: #28a745;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .page3-recipe-card .page3-label-paleo{
+    display: inline-block;
+    background-color: rgb(225, 225, 68);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .page3-content{
+    color: #333333;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .page3-heading h3{
+    top: 12px;
+    gap: 100px;
+  }
+
+  .page3-recipe-card .page3-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    color: #6e6c6c;
+    gap: 15px;
+  }
+  .page3-recipe-card .page3-info span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .page3-recipe-card .page3-info img{
+    width: 16px;
+    height: 16px;
+  }
+  .page3-sidebar{
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+  }
+  .page3-sidebar h3{
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .page3-sidebar ul{
+    list-style: none;
+  }
+  .page3-sidebar ul li{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .page3-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2e2e2e;
+    font-weight: 400;
+  }  
+  .page3-icon-svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }  
+  .page3-footer{
+    text-align: center;
+    margin-top: 20px;
+  }
+  .page3-footer a{
+    color: #f28c38;
+    font-size: 14px;
+    display: inline-block; /* ensures margin/padding applies properly */
+    margin-top: 10px; /* adjust the value to control spacing */
+  }
+
+
+
+  /*----------------------- page 4 ---------------------*/
+  .page4-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 80px;
+    background-color: #fdf2e9;
+  }  
+  /* Left Section (Testimonials) */
+  .page4-left-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    padding-right: 50px;
+  }
+  .page4-p p{
+    color: #d26c1e;
+  }
+  .page4-p h1{
+    font-size: 32px;
+  }  
+  .page4-testimonials-label {
+    color: #d26c1e;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }  
+  .page4-main-heading {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #333333;
+  }  
+  .page4-testimonial {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column; 
+  }
+  .page4-testimonals-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }  
+  .page4-avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0; /* Remove default margin */
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }  
+  .page4-quote {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+  } 
+  .page4-author {
+    font-size: 15px;
+    margin-top: 4px;
+    color: #777;
+  } 
+  /* Right Section (Gallery) */
+  .page4-right-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    border-radius: 0;
+  }  
+  .page4-right-section img {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    transition: transform 0.3s ease; /* smooth zoom effect */
+  }
+  .page4-right-section img:hover {
+    transform: scale(1.1); /* zoom in by 20% */
+    transform-origin: center center;
+  }
+  .page4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+  }  
+  .page4-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: flex;
+    border-radius: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  /*------------- page 5 --------------------*/
+
+  .page5-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: white;
+  }
+  .content5{
+    background-color: white;
+  }
+  .page5-pricing-label {
+    color: #e67e22;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .page5-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333333;
+  }
+  .page5-pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .page5-card {
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+  }
+  .page5-highlight {
+    background-color: #fff4eb;
+  }
+  .page5-price-block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 0.5rem;
+  }
+  .page5-dollar {
+    font-size: 1.2rem;
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+  }
+  .page5-price {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .page5-best-value {
+    position: absolute;
+    top: 100px;
+    right: -35px;
+    background-color: #facc15;
+    color: #434040;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 4px 40px;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    z-index: 2;
+    box-shadow: 0 0 0 1000px transparent;  
+  } 
+  .page5-plan-title {
+    font-size: 16px;
+    color: #e67e22;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }  
+  .page5-price {
+    font-size: 40px;
+    font-weight: 700;
+    color: #2e2e2e;
+  }  
+  .page5-sub-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }  
+  .page5-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    line-height: 2;
+    font-size: 14px;
+  }  
+  .page5-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2e2e2e;
+    font-weight: 400;
+  }  
+  .page5-icon-svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }  
+  .page5-btn {
+    display: block;
+    margin: 1rem auto 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #faae2b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+   /* background-color: #faae2b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;*/
+  }  
+  .page5-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border-color: #e67e22;
+  }
+  .page5-btn:hover {
+    background-color: #cf711f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(230, 126, 34, 0.4);
+  }
+  .page5-footer-note {
+    font-size: 13px;
+    color: #252323;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  /*--------------Page 6 ------------------*/
+.page6-features {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+    text-align: center;
+    gap: 80px;
+}  
+.page6-feature {
+    max-width: 200px;
+    color: #333333;
+    font-size: 30px;
+}
+.page6-feature p {
+    line-height: 1.5;
+    font-size: 18px;
+    color: #555;
+    width: 250px;
+}  
+  .page6-feature .page6-icon {
+    font-size: 30px;
+    background-color: #fdf2e9;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 4px;
+    align-items: flex-start;
+}
+.page6-icon img {
+    height: 50px;
+    width: 20px;
+    object-fit: contain;
+}  
+.page6-feature h3 {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}  
+.page6-signup-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}  
+.page6-signup-box {
+    display: flex;
+    background: linear-gradient(to right, #ec8c3a, #e87e1c);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    width: 100%;
+    padding: 0;
+}  
+.page6-form-content {
+    padding: 2rem;
+    flex: 1;
+    color: #fff;
+}  
+.page6-form-content h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #333333;
+}  
+.page6-form-content p {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    color: #555;
+}  
+.page6-form-content form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}  
+.page6-form-group {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+.page6-submit-button {
+    background-color: black;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.page6-submit-button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}  
+.page6-full-width {
+    flex: 1 1 45%;
+    flex-direction: column;
+    display: flex;
+}  
+.page6-form-group input,
+.page6-form-group select {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.3rem;
+ }
+.page6-form-group label{
+    color: #333333;
+    font-weight: bold;
+    font-size: 12px;
+} 
+.page6-form-content button {
+    background-color: #2e1400;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.page6-full-width:hover{
+    color: black;
+}  
+.page6-form-image {
+    flex: 1;
+}  
+.page6-form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*----------------page 7 --------------------*/
+#page7 {
+    background-color: transparent;
+    padding: 60px 40px;
+    font-family: 'Rubik', sans-serif;
+    color: #333333;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+    gap: 40px;
+}  
+#page7Logo {
+    width: 120px;
+    margin-bottom: 20px;
+}  
+#page7SocialIcons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}  
+#page7SocialIcons img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}  
+#page7SocialIcons img:hover {
+    transform: scale(1.1);
+}  
+#page7Copyright {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+} 
+#page7 h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}  
+#page7 p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+}
+#page7 p:hover {
+    text-decoration: underline;
+}
+ 
+  /*------------ Responsive page -----------------*/
+@media (max-width: 768px) {
+  /* Show hamburger icon only on page1 */
+  #page1 .nav-toggle-label {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1001;
+  }
+  /* Hide main nav by default */
+  #page1 .page1-main-nav {
+    display: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  /* When hamburger is checked */
+  #page1 .nav-toggle:checked ~ .page1-main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+    position: absolute; /* Only covers the page1 section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: white;
+    z-index: 1000;
+    backdrop-filter: blur(300px); 
+    padding: 60px 20px;
+    animation: slideIn 0.3s ease-in-out;
+  }
+  #page1 .page1-main-nav-list {
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #page1 .page1-main-nav-list li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+  }
+ .page1-nav-cta {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  /* Shrink hero section padding */
+  .page1-section-hero {
+    padding: 40px 20px;
+  }
+  .page1-hero {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Shrink text box */
+  .page1-hero-text-box {
+    max-width: 90%;
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .page1-heading-primary {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+  .page1-hero-description {
+    font-size: 16px;
+  }
+  /* Center and resize buttons */
+  .page1-hero-buttons {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+    padding: 0;
+  }
+  .page1-btn {
+    padding: 10px 24px;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  /* Delivered meals section */
+  .page1-delivered-meals {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* Shrink image box */
+  .page1-hero-img-box {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .page1-img-meal2 {
+    width: 100%;
+    height: auto;
+  }
+  
+ /* Page 2 */
+ .page2-container {
+    padding: 0 15px;
+  }
+  .page2-heading {
+    font-size: 28px;
+  }
+  .page2-logos {
+    font-size: 16px;
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+  .page2-logos img {
+    height: 12px; /* Further reduce logo size for smaller screens */
+  }
+  .page2-featured-text{
+    font-weight: bold;
+    margin-top: 40px;
+  }
+   
+ .page2-how-it-works p{
+    max-width: 150%; /* Full width for the text box */
+    padding-left: 30px; /* Reduced padding */
+    padding-right: 10px; /* Reduced padding */
+    margin-bottom: 10px;
+  }
+  .page2-how-it-works h2{
+    max-width: 100%; /* Full width for the text box */
+    padding-left: 30px; /* Reduced padding */
+    padding-right: 20px; /* Reduced padding */
+    font-weight: bold; /* font-weight should be a number without units */
+    font-size: 26px;
+    line-height: 1; /* Adjust line-height to reduce gap between sentences */
+  }
+  .page2-step-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page2-step-text {
+    text-align: center;
+  }
+  .page2-step-image img {
+    max-width: 150px; /* Reduced phone size for tablets */
+    order: 1;
+    left: 80%;
+  }
+  .page2-step-image::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 125%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Slightly smaller for the ring effect */
+    height: 150px;
+    background-color: #e2ccbb;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .page2-step-image::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 125%;
+    transform: translate(-50%, -50%);
+    width: 280px; /* Size of the background circle */
+    height: 260px;
+    background-color: #f2e4d9; /* Peach color for the main circle */
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .page2-step-number {
+    max-width: 150%; /* Full width for the text box */
+    padding-left: 30px; /* Reduced padding */
+    padding-right: 10px; /* Reduced padding */
+    margin-bottom: 10px;
+    font-size: 48px;
+    text-align: start;
+    order: 2;
+  }
+  .page2-step-text h3 {
+    max-width: 150%; /* Full width for the text box */
+    padding-left: 30px; /* Reduced padding */
+    padding-right: 10px; /* Reduced padding */
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 100%;
+    order: 3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .page2-step-text, .page2-how-it-works p {
+    font-size: 14px;
+    text-align: start;
+    width: 100%;
+    max-width: 100%;
+    order: 4;
+    white-space: normal;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+    display: block;
+  }
+  .page2-featured-text {
+    font-size: 12px;
+  }
+   
+   /* Page 3 */
+  .page3-header p{
+    margin-top: 80px;
+  }
+  .page3-header h1{
+    max-width: 100%; /* Full width for the text box */
+    padding-left: 30px; /* Reduced padding */
+    padding-right: 20px; /* Reduced padding */     
+    font-weight: bold; /* font-weight should be a number without units */
+    font-size: 28px;
+    line-height: 1; /* Adjust line-height to reduce gap between sentences */
+    margin-top: 20px;
+  }
+  .page3-main-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page3-recipes {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page3-recipe-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page3-sidebar{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page3-footer{
+    margin-bottom: 50px;
+  }
+  
+  /* Page 4 */
+  .page4-container{
+    display: block;
+    flex-direction: column;
+    align-items: flex-start; /* Keep items aligned to the start */
+    padding-left: 30px;  /* Gives a nice gap on the left */
+    padding-right: 20px; /* Optional right padding */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .page4-left-section p{
+    max-width: 200%; /* Full width for the text box */
+    padding-left: 10px; /* Reduced padding */
+    padding-right: 10px; /* Reduced padding */
+    margin-bottom: 10px;
+    margin-top: 60px;
+  }
+  .page4-left-section h1 {
+    font-size: 24px;
+    line-height: 1.4;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: normal;
+    word-break: keep-all;
+  }
+  .page4-testimonals-grid {
+    grid-template-columns: 1fr;
+  }
+  .page4-testimonial {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px; /* minimal space between avatar and text */
+    margin-bottom: 30px;
+    font-size: 13px;
+    line-height: 1.2;
+    }
+    .page4-testimonial img {
+    width: 36px; /* smaller avatar */
+    height: 36px;
+    flex-shrink: 0;
+  }
+    .page4-testimonial p {
+    margin: 0;
+    padding: 0;
+    max-width: 350px; /* prevent long lines */
+    word-break: break-word;
+  }
+    .page4-avatar {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .page4-testimonial > div {
+    display: inline-flex; /* <<< this is KEY */
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .page4-quote,
+  .page4-author {
+    margin: 0;
+    padding: 0;
+    width: 350px;
+  }
+  .page4-grid {
+    grid-template-columns: repeat(4, 1fr);  /* 2 images per row on small screens */
+    padding: 0 10px; /* Slightly smaller padding on mobile */
+  }
+  .page4-grid img {
+    height: 90px; /* Smaller height for mobile screens */
+    width: 80px;
+  }
+
+  /* Page 5 */
+  .page5-pricing-cards {
+    flex-direction: column;
+  }
+  .page5-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* page 6 */
+  .page6-features{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .page6-icon {
+    margin-bottom: 10px; 
+  }
+  .page6-feature h3 {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .page6-feature p {
+    font-size: 14px;
+    padding: 0 20px; /* Adds padding before the text */
+    white-space: normal; /* Allow wrapping */
+    width: 200%;
+    overflow-wrap: normal;
+    word-wrap: normal;
+    word-break: normal;
+    text-align: justify; /* Makes the text stretch to the full width */
+  }
+   /* Responsive form layout */
+  .page6-signup-box {
+    display: flex;
+    flex-direction: column-reverse; /* Put image on top, form below */
+    align-items: center;
+    }
+  .page6-signup-section{
+    padding: 0 20px; /* Adds 20px padding on left and right */
+  }
+  .page6-form-content,
+  .page6-form-image {
+    width: 100%;
+    }
+  .page6-form-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  /* Optional: reduce padding/margin for mobile */
+  .page6-form-group {
+    margin-bottom: 15px;
+  }
+  .page6-submit-button {
+    width: 100%;
+  }
+  
+  /* page 7 */
+  #page7 {
+    display: flex;
+    flex-direction: row; /* Align in row */
+    justify-content: space-between; /* Create space between them */
+  }
+  
+  /* Ensure both sections take up equal space */
+  #page7 > div {
+    flex: 1;
+  }
+  /* Omnifood section will stay in the first position */
+  #page7 > div:nth-child(1) {
+    order: 1;
+  }
+  /* Contact Us section will stay in the second position */
+  #page7 > div:nth-child(2) {
+    order: 2;
+  }
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
